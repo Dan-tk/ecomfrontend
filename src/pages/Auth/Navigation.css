@@ -3,6 +3,9 @@
   height: 100vh; /* Set height to 100% of viewport height */
   transition: width 0.3s ease-in-out;
   overflow-y: auto; /* Enable vertical scrolling */
+
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: transparent transparent; /* Scrollbar thumb color and track color */
 }
 
 #navigation-container:hover {
@@ -34,6 +37,24 @@
 #navigation-container:hover .search-icon {
   display: none;
   transition: opacity 0.2s ease-in-out; /* Add opacity transition */
+}
+
+/* WebKit-based browsers */
+#navigation-container::-webkit-scrollbar {
+  width: 4px; /* Very thin scrollbar */
+}
+
+#navigation-container::-webkit-scrollbar-track {
+  background: transparent; /* Make track transparent */
+}
+
+#navigation-container::-webkit-scrollbar-thumb {
+  background: #555; /* Color of the scrollbar thumb */
+  border-radius: 2px; /* Slightly rounded corners */
+}
+
+#navigation-container::-webkit-scrollbar-thumb:hover {
+  background: #777; /* Color of the scrollbar thumb on hover */
 }
 
 @media (max-width: 768px) {
