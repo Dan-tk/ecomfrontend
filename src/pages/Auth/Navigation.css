@@ -1,0 +1,50 @@
+#navigation-container {
+  width: 3%;
+  height: 100vh; /* Set height to 100% of viewport height */
+  transition: width 0.3s ease-in-out;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+#navigation-container:hover {
+  width: 10%;
+}
+
+/* Initially hide nav-item-name */
+.nav-item-name {
+  display: none;
+  transition: opacity 0.2s ease-in-out; /* Add opacity transition */
+}
+
+#navigation-container:hover .nav-item-name {
+  display: block;
+  opacity: 1;
+}
+
+.search-input {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out; /* Add opacity transition */
+}
+
+#navigation-container:hover .search-input {
+  display: block;
+  opacity: 1;
+}
+
+#navigation-container:hover .search-icon {
+  display: none;
+  transition: opacity 0.2s ease-in-out; /* Add opacity transition */
+}
+
+@media (max-width: 768px) {
+  #navigation-container {
+    width: 8%; /* Set a fixed width on mobile */
+  }
+
+  /* Prevent hover width change on mobile */
+  #navigation-container:hover {
+    width: 8%; /* Ensure the width remains the same */
+  }
+
+ 
+}
